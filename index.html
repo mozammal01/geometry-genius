@@ -5,10 +5,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geometry</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--  -->
 </head>
 
-<body>
-  <h1>Welcome to Geometry</h1>
+<body class="w-11/12 mx-auto my-10">
+  <header class="bg-blue-100 p-5 rounded flex justify-between	items-center">
+    <div>
+      <h1 class="text-4xl font-bold text-slate-800">Interactive</h1>
+      <h5 class="text-2xl text-slate-500">Geometry Genius</h5>
+    </div>
+    <div>
+      <button class="px-7 py-2 rounded text-white bg-blue-600 font-semibold">Blog</button>
+    </div>
+  </header>
+  <main class="mt-10">
+    <div class="grid grid-cols-4 gap-5">
+
+      <div class="border-2 rounded text-center p-5">
+        <div class="w-40 mx-auto">
+          <img src="images/triangle.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-2xl  text-slate-800 font-bold mt-8">Triangle</h1>
+          <h1 class="text-slate-500 m-1">Area (A) = 0.5× b× h</h1>
+          <button class="w-16 px-2 rounded text-left bg-slate-200">b</button>
+          <span class="m-2">cm</span>
+          <button class="w-16 px-2 rounded text-left bg-slate-200">h</button>
+          <span class="m-2">cm</span>
+          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+        </div>
+      </div>
+
+      <div class="border-2 rounded text-center p-5">
+        <div>
+          <img class="w-52 mx-auto" src="images/rectangle.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-2xl  text-slate-800 font-bold mt-8">Rectangle</h1>
+          <h1 class="text-slate-500 m-1">Area (A) = w× l</h1>
+          <button class="w-16 px-2 rounded text-left bg-slate-200">w</button>
+          <span class="m-2">cm</span>
+          <button class="w-16 px-2 rounded text-left bg-slate-200">l</button>
+          <span class="m-2">cm</span>
+          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+        </div>
+      </div>
+
+      <div class="border-2 rounded text-center p-5">
+        <div>
+          <img class="w-60 mx-auto" src="images/parallelogram.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-2xl  text-slate-800 font-bold mt-8">Parallelogram</h1>
+          <h1 class="text-slate-500 m-1">Area (A) = b× h</h1>
+          <span class=" m-2">b=10cm, h=10cm</span>
+          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+        </div>
+      </div>
+      <div class="border-2 rounded text-center p-5 h-72">
+        <h1 class="font-semibold underline">Area calcutation</h1>
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-5 mt-8">
+      <div class="border-2 rounded text-center p-5">
+        <div class="w-52 mx-auto">
+          <img src="images/rhombus.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-2xl  text-slate-800 font-bold mt-8">Rhombus</h1>
+          <h1 class="text-slate-500 m-1">Area (A) = 0.5× d<sub>1</sub>× d<sub>2</sub></h1>
+          <span class=" m-2">d<sub>1</sub>=16cm</span>
+          <span>d<sub>2</sub>=8cm</span>
+          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+        </div>
+      </div>
+
+      <div class="border-2 rounded text-center p-5">
+        <div>
+          <img class="w-40 mx-auto" src="images/pentagon.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-2xl  text-slate-800 font-bold mt-8">Pentagon</h1>
+          <h1 class="text-slate-500 m-1">Area (A) = 0.5 × p× b</h1>
+          <span class=" m-2">p=6cm, b=10cm</span>
+          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+        </div>
+      </div>
+
+      <div class="border-2 rounded text-center p-5">
+        <div>
+          <img class="w-60 mx-auto" src="images/ellipse.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-2xl  text-slate-800 font-bold mt-8">Ellipse</h1>
+          <h1 class="text-slate-500 m-1">Area (A) = πab</h1>
+          <span class=" m-2">a=10cm, b=4cm</span>
+          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
