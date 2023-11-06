@@ -21,7 +21,10 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
 
   const triangleResultField = document.getElementById('triangle-result-field')
 
-  if(event){
+  if(isNaN(triangleInputAmountB , triangleInputAmountH)){
+    alert('Please enter a valid number')
+  }
+  else{
     triangleResultField.style.display = 'block'
   }
 })
@@ -161,10 +164,12 @@ document.getElementById('ellipse-calculate-btn').addEventListener('click', funct
   
   const ellipseResultField = document.getElementById('ellipse-result-field')
 
-  if(ellipseInputAmounta == Number){
-    ellipseResultField.style.display = 'block'
+
+  console.log(ellipseInputAmounta);
+  if(isNaN(ellipseInputAmounta)){
+    alert('enter a number')
   }
   else{
-    alert('enter a number')
+    ellipseResultField.style.display = 'block'
   }
 })
