@@ -22,13 +22,13 @@
   </header>
   <main class="mt-10">
     <div class="grid grid-cols-4 gap-5">
-      <div class="border-2 rounded text-center p-5">
+      <div class="border-2 rounded text-center p-5 h-fit bg-red-600 hover:bg-cyan-300 text-white">
         <div class="w-40 mx-auto">
           <img src="images/triangle.png" alt="">
         </div>
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Triangle</h1>
-          <h1 class="text-slate-500 m-1">Area (A) = 0.5× b× h</h1>
+          <h1 class="m-1">Area (A) = 0.5× b× h</h1>
           <input id="triangle-input-b" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="b">
           <span class="m-2">cm</span>
           <input id="triangle-input-h" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="h">
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div class="border-2 rounded text-center p-5">
+      <div class="border-2 rounded text-center p-5 h-fit">
         <div>
           <img class="w-52 mx-auto" src="images/rectangle.png" alt="">
         </div>
@@ -54,18 +54,21 @@
         </div>
       </div>
 
-      <div class="border-2 rounded text-center p-5">
+      <div class="border-2 rounded text-center p-5 h-fit">
         <div>
           <img class="w-60 mx-auto" src="images/parallelogram.png" alt="">
         </div>
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Parallelogram</h1>
           <h1 class="text-slate-500 m-1">Area (A) = b× h</h1>
-          <span class=" m-2">b=10cm, h=10cm</span>
-          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+          <input id="parallelogram-input-b" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="b">
+          <span class="m-2">cm</span>
+          <input id="parallelogram-input-h" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="h">
+          <span class="m-2">cm</span>
+          <button id="parallelogram-calculate-btn" class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
-      <div id="result-field" class="border-2 rounded text-center p-5 h-72">
+      <div id="result-field" class="border-2 rounded text-center p-5 h-72 overflow-scroll overflow-x-hidden">
         <h1 class="font-semibold underline">Area calcutation</h1>
         <div id="triangle-result-field" class="hidden">
           <span>
@@ -73,51 +76,90 @@
           </span>
           <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
         </div>
+
         <div id="rectangle-result-field" class="hidden">
           <span>
             2. Rectangle <span class="m-1" id="rectangle-result">00</span>cm²
           </span>
           <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
         </div>
+
+        <div id="parallelogram-result-field" class="hidden">
+          <span>
+            3. Parallelogram <span class="m-1" id="parallelogram-result">00</span>cm²
+          </span>
+          <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
+        </div>
+
+        <div id="rhombus-result-field" class="hidden">
+          <span>
+            4. Rhombus <span class="m-1" id="rhombus-result">00</span>cm²
+          </span>
+          <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
+        </div>
+        
+        <div id="pentagon-result-field" class="hidden">
+          <span>
+            5. Pentagon <span class="m-1" id="pentagon-result">00</span>cm²
+          </span>
+          <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
+        </div>
+        
+        <div id="ellipse-result-field" class="hidden">
+          <span>
+            6. Ellipse <span class="m-1" id="ellipse-result">00</span>cm²
+          </span>
+          <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
+        </div>
+
+
       </div>
     </div>
     
 
     <div class="grid grid-cols-4 gap-5 mt-8">
-      <div class="border-2 rounded text-center p-5">
+      <div class="border-2 rounded text-center p-5 h-fit bg-cyan-300 hover:bg-red-600 hover:text-white">
         <div class="w-52 mx-auto">
           <img src="images/rhombus.png" alt="">
         </div>
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Rhombus</h1>
-          <h1 class="text-slate-500 m-1">Area (A) = 0.5× d<sub>1</sub>× d<sub>2</sub></h1>
-          <span class=" m-2">d<sub>1</sub>=16cm</span>
-          <span>d<sub>2</sub>=8cm</span>
-          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+          <h1 class="m-1">Area (A) = 0.5× d<sub>1</sub>× d<sub>2</sub></h1>
+          <input id="rhombus-input-d1" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="d1">
+          <span class="m-2">cm</span>
+          <input id="rhombus-input-d2" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="d2">
+          <span class="m-2">cm</span>
+          <button id="rhombus-calculate-btn" class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
 
-      <div class="border-2 rounded text-center p-5">
+      <div class="border-2 rounded text-center p-5 h-fit">
         <div>
           <img class="w-40 mx-auto" src="images/pentagon.png" alt="">
         </div>
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Pentagon</h1>
           <h1 class="text-slate-500 m-1">Area (A) = 0.5 × p× b</h1>
-          <span class=" m-2">p=6cm, b=10cm</span>
-          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+          <input id="pentagon-input-p" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="p">
+          <span class="m-2">cm</span>
+          <input id="pentagon-input-b" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="b">
+          <span class="m-2">cm</span>
+          <button id="pentagon-calculate-btn" class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
 
-      <div class="border-2 rounded text-center p-5">
+      <div class="border-2 rounded text-center p-5 h-fit">
         <div>
           <img class="w-60 mx-auto" src="images/ellipse.png" alt="">
         </div>
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Ellipse</h1>
           <h1 class="text-slate-500 m-1">Area (A) = πab</h1>
-          <span class=" m-2">a=10cm, b=4cm</span>
-          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+          <input id="ellipse-input-a" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="a">
+          <span class="m-2">cm</span>
+          <input id="ellipse-input-b" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="b">
+          <span class="m-2">cm</span>
+          <button id="ellipse-calculate-btn" class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
     </div>

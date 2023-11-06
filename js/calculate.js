@@ -1,5 +1,6 @@
-const resultField = document.getElementById('result-field');
 
+const resultField = document.getElementById('result-field');
+// Triangle
 document.getElementById('triangle-calculate-btn').addEventListener('click', function(event){
   const triangleInputFieldB = document.getElementById('triangle-input-b')
   const triangleInputFieldStringB = triangleInputFieldB.value;
@@ -12,7 +13,6 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
   triangleInputFieldH.value = '';
   
   const totalTriangle = 0.5 * triangleInputAmountB * triangleInputAmountH;
-  // resultField.value = totalTriangle;
 
   const previousTriangleResultField = document.getElementById('triangle-result');
 
@@ -26,7 +26,7 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
   }
 })
 
-
+// Rectangle
 document.getElementById('rectangle-calculate-btn').addEventListener('click', function(event){
   const rectangleInputFieldW = document.getElementById('rectangle-input-w')
   const rectangleInputFieldStringW = rectangleInputFieldW.value;
@@ -52,3 +52,68 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
   }
 })
 
+// Parallelogram
+document.getElementById('parallelogram-calculate-btn').addEventListener('click', function(event){
+  const  totalParallelogram = 10 * 10;
+
+
+  const previousParallelogramResultField = document.getElementById('parallelogram-result');
+
+  previousParallelogramResultField.innerText = totalParallelogram
+
+
+  const parallelogramResultField = document.getElementById('parallelogram-result-field')
+
+  if(event){
+    parallelogramResultField.style.display = 'block'
+  }
+})
+
+// Rhombosh
+document.getElementById('rhombus-calculate-btn').addEventListener('click', function(event){
+  const  totalRhombus = 0.5 * 16 * 8;
+
+
+  const previousRhombusResultField = document.getElementById('rhombus-result');
+
+  previousRhombusResultField.innerText = totalRhombus
+
+
+  const rhombusResultField = document.getElementById('rhombus-result-field')
+
+  if(event){
+    rhombusResultField.style.display = 'block'
+  }
+})
+
+// Pentagon
+document.getElementById('pentagon-calculate-btn').addEventListener('click', function(event){
+  const  totalPentagon = 0.5 * 6 * 10;
+
+
+  const previousPentagonResultField = document.getElementById('pentagon-result');
+
+  previousPentagonResultField.innerText = totalPentagon
+
+
+  const pentagonResultField = document.getElementById('pentagon-result-field')
+
+  if(event){
+    pentagonResultField.style.display = 'block'
+  }
+})
+
+// Ellipse
+document.getElementById('ellipse-calculate-btn').addEventListener('click', function(event){
+  const  totalEllipse = 3.14 * 10 * 4;
+
+  const previousEllipseResultField = document.getElementById('ellipse-result');
+  
+  previousEllipseResultField.innerText = totalEllipse.toFixed(2);
+  
+  const ellipseResultField = document.getElementById('ellipse-result-field')
+
+  if(event){
+    ellipseResultField.style.display = 'block'
+  }
+})
