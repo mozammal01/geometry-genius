@@ -1,7 +1,7 @@
 
 const resultField = document.getElementById('result-field');
 // Triangle
-document.getElementById('triangle-calculate-btn').addEventListener('click', function(event){
+document.getElementById('triangle-calculate-btn').addEventListener('click', function (event) {
   const triangleInputFieldB = document.getElementById('triangle-input-b')
   const triangleInputFieldStringB = triangleInputFieldB.value;
   const triangleInputAmountB = parseFloat(triangleInputFieldStringB);
@@ -11,7 +11,7 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
   const triangleInputFieldStringH = triangleInputFieldH.value;
   const triangleInputAmountH = parseFloat(triangleInputFieldStringH);
   triangleInputFieldH.value = '';
-  
+
   const totalTriangle = 0.5 * triangleInputAmountB * triangleInputAmountH;
 
   const previousTriangleResultField = document.getElementById('triangle-result');
@@ -21,16 +21,16 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
 
   const triangleResultField = document.getElementById('triangle-result-field')
 
-  if(isNaN(triangleInputAmountB , triangleInputAmountH)){
+  if (isNaN(triangleInputAmountB) && isNaN(triangleInputAmountH)) {
     alert('Please enter a valid number')
   }
-  else{
+  else {
     triangleResultField.style.display = 'block'
   }
 })
 
 // Rectangle
-document.getElementById('rectangle-calculate-btn').addEventListener('click', function(event){
+document.getElementById('rectangle-calculate-btn').addEventListener('click', function (event) {
   const rectangleInputFieldW = document.getElementById('rectangle-input-w')
   const rectangleInputFieldStringW = rectangleInputFieldW.value;
   const rectangleInputAmountW = parseFloat(rectangleInputFieldStringW);
@@ -42,7 +42,7 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
   rectangleInputFieldl.value = '';
 
   const totalRectangle = rectangleInputAmountW * rectangleInputAmountl;
-  
+
 
   const previousRectangleResultField = document.getElementById('rectangle-result');
 
@@ -51,13 +51,16 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
 
   const rectangleResultField = document.getElementById('rectangle-result-field')
 
-  if(event){
+  if (isNaN(rectangleInputAmountB, rectangleInputAmountH)) {
+    alert('Please enter a valid number')
+  }
+  else {
     rectangleResultField.style.display = 'block'
   }
 })
 
 // Parallelogram
-document.getElementById('parallelogram-calculate-btn').addEventListener('click', function(event){
+document.getElementById('parallelogram-calculate-btn').addEventListener('click', function (event) {
 
   const parallelogramInputFieldb = document.getElementById('parallelogram-input-b')
   const parallelogramInputFieldStringb = parallelogramInputFieldb.value;
@@ -70,7 +73,7 @@ document.getElementById('parallelogram-calculate-btn').addEventListener('click',
   parallelogramInputFieldh.value = '';
 
   const totalParallelogram = parallelogramInputAmountb * parallelogramInputAmounth;
-  
+
 
 
   const previousParallelogramResultField = document.getElementById('parallelogram-result');
@@ -80,13 +83,16 @@ document.getElementById('parallelogram-calculate-btn').addEventListener('click',
 
   const parallelogramResultField = document.getElementById('parallelogram-result-field')
 
-  if(event){
+  if (isNaN(parallelogramInputAmountB, parallelogramInputAmountH)) {
+    alert('Please enter a valid number')
+  }
+  else {
     parallelogramResultField.style.display = 'block'
   }
 })
 
 // Rhombosh
-document.getElementById('rhombus-calculate-btn').addEventListener('click', function(event){
+document.getElementById('rhombus-calculate-btn').addEventListener('click', function (event) {
 
   const rhombusInputFieldd1 = document.getElementById('rhombus-input-d1')
   const rhombusInputFieldStringd1 = rhombusInputFieldd1.value;
@@ -98,8 +104,8 @@ document.getElementById('rhombus-calculate-btn').addEventListener('click', funct
   const rhombusInputAmountd2 = parseFloat(rhombusInputFieldStringd2);
   rhombusInputFieldd2.value = '';
 
-  const totalRhombus =0.5 * rhombusInputAmountd1 * rhombusInputAmountd2;
-  
+  const totalRhombus = 0.5 * rhombusInputAmountd1 * rhombusInputAmountd2;
+
 
 
   const previousRhombusResultField = document.getElementById('rhombus-result');
@@ -109,13 +115,16 @@ document.getElementById('rhombus-calculate-btn').addEventListener('click', funct
 
   const rhombusResultField = document.getElementById('rhombus-result-field')
 
-  if(event){
+  if (isNaN(rhombusInputAmountB, rhombusInputAmountH)) {
+    alert('Please enter a valid number')
+  }
+  else {
     rhombusResultField.style.display = 'block'
   }
 })
 
 // Pentagon
-document.getElementById('pentagon-calculate-btn').addEventListener('click', function(event){
+document.getElementById('pentagon-calculate-btn').addEventListener('click', function (event) {
 
   const pentagonInputFieldp = document.getElementById('pentagon-input-p')
   const pentagonInputFieldStringp = pentagonInputFieldp.value;
@@ -127,8 +136,8 @@ document.getElementById('pentagon-calculate-btn').addEventListener('click', func
   const pentagonInputAmountb = parseFloat(pentagonInputFieldStringb);
   pentagonInputFieldb.value = '';
 
-  const totalPentagon =0.5* pentagonInputAmountp * pentagonInputAmountb;
-  
+  const totalPentagon = 0.5 * pentagonInputAmountp * pentagonInputAmountb;
+
 
   const previousPentagonResultField = document.getElementById('pentagon-result');
 
@@ -137,14 +146,17 @@ document.getElementById('pentagon-calculate-btn').addEventListener('click', func
 
   const pentagonResultField = document.getElementById('pentagon-result-field')
 
-  if(event){
+  if (isNaN(pentagonInputAmountB, pentagonInputAmountH)) {
+    alert('Please enter a valid number')
+  }
+  else {
     pentagonResultField.style.display = 'block'
   }
 })
 
 // Ellipse
-document.getElementById('ellipse-calculate-btn').addEventListener('click', function(event){
-  
+document.getElementById('ellipse-calculate-btn').addEventListener('click', function (event) {
+
   const ellipseInputFielda = document.getElementById('ellipse-input-a')
   const ellipseInputFieldStringa = ellipseInputFielda.value;
   const ellipseInputAmounta = parseFloat(ellipseInputFieldStringa);
@@ -156,20 +168,20 @@ document.getElementById('ellipse-calculate-btn').addEventListener('click', funct
   ellipseInputFieldb.value = '';
 
   const totalEllipse = 3.14 * ellipseInputAmounta * ellipseInputAmountb;
-  
+
 
   const previousEllipseResultField = document.getElementById('ellipse-result');
-  
+
   previousEllipseResultField.innerText = totalEllipse.toFixed(2);
-  
+
   const ellipseResultField = document.getElementById('ellipse-result-field')
 
 
   console.log(ellipseInputAmounta);
-  if(isNaN(ellipseInputAmounta)){
-    alert('enter a number')
+  if (isNaN(ellipseInputAmounta)) {
+    alert('enter a valid number')
   }
-  else{
+  else {
     ellipseResultField.style.display = 'block'
   }
 })
