@@ -40,6 +40,7 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
 
   const totalRectangle = rectangleInputAmountW * rectangleInputAmountl;
   
+
   const previousRectangleResultField = document.getElementById('rectangle-result');
 
   previousRectangleResultField.innerText = totalRectangle
@@ -54,7 +55,19 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
 
 // Parallelogram
 document.getElementById('parallelogram-calculate-btn').addEventListener('click', function(event){
-  const  totalParallelogram = 10 * 10;
+
+  const parallelogramInputFieldb = document.getElementById('parallelogram-input-b')
+  const parallelogramInputFieldStringb = parallelogramInputFieldb.value;
+  const parallelogramInputAmountb = parseFloat(parallelogramInputFieldStringb);
+  parallelogramInputFieldb.value = '';
+
+  const parallelogramInputFieldh = document.getElementById('parallelogram-input-h');
+  const parallelogramInputFieldStringh = parallelogramInputFieldh.value;
+  const parallelogramInputAmounth = parseFloat(parallelogramInputFieldStringh);
+  parallelogramInputFieldh.value = '';
+
+  const totalParallelogram = parallelogramInputAmountb * parallelogramInputAmounth;
+  
 
 
   const previousParallelogramResultField = document.getElementById('parallelogram-result');
@@ -71,7 +84,19 @@ document.getElementById('parallelogram-calculate-btn').addEventListener('click',
 
 // Rhombosh
 document.getElementById('rhombus-calculate-btn').addEventListener('click', function(event){
-  const  totalRhombus = 0.5 * 16 * 8;
+
+  const rhombusInputFieldd1 = document.getElementById('rhombus-input-d1')
+  const rhombusInputFieldStringd1 = rhombusInputFieldd1.value;
+  const rhombusInputAmountd1 = parseFloat(rhombusInputFieldStringd1);
+  rhombusInputFieldd1.value = '';
+
+  const rhombusInputFieldd2 = document.getElementById('rhombus-input-d2');
+  const rhombusInputFieldStringd2 = rhombusInputFieldd2.value;
+  const rhombusInputAmountd2 = parseFloat(rhombusInputFieldStringd2);
+  rhombusInputFieldd2.value = '';
+
+  const totalRhombus =0.5 * rhombusInputAmountd1 * rhombusInputAmountd2;
+  
 
 
   const previousRhombusResultField = document.getElementById('rhombus-result');
@@ -88,8 +113,19 @@ document.getElementById('rhombus-calculate-btn').addEventListener('click', funct
 
 // Pentagon
 document.getElementById('pentagon-calculate-btn').addEventListener('click', function(event){
-  const  totalPentagon = 0.5 * 6 * 10;
 
+  const pentagonInputFieldp = document.getElementById('pentagon-input-p')
+  const pentagonInputFieldStringp = pentagonInputFieldp.value;
+  const pentagonInputAmountp = parseFloat(pentagonInputFieldStringp);
+  pentagonInputFieldp.value = '';
+
+  const pentagonInputFieldb = document.getElementById('pentagon-input-b');
+  const pentagonInputFieldStringb = pentagonInputFieldb.value;
+  const pentagonInputAmountb = parseFloat(pentagonInputFieldStringb);
+  pentagonInputFieldb.value = '';
+
+  const totalPentagon =0.5* pentagonInputAmountp * pentagonInputAmountb;
+  
 
   const previousPentagonResultField = document.getElementById('pentagon-result');
 
@@ -105,7 +141,19 @@ document.getElementById('pentagon-calculate-btn').addEventListener('click', func
 
 // Ellipse
 document.getElementById('ellipse-calculate-btn').addEventListener('click', function(event){
-  const  totalEllipse = 3.14 * 10 * 4;
+  
+  const ellipseInputFielda = document.getElementById('ellipse-input-a')
+  const ellipseInputFieldStringa = ellipseInputFielda.value;
+  const ellipseInputAmounta = parseFloat(ellipseInputFieldStringa);
+  ellipseInputFielda.value = '';
+
+  const ellipseInputFieldb = document.getElementById('ellipse-input-b');
+  const ellipseInputFieldStringb = ellipseInputFieldb.value;
+  const ellipseInputAmountb = parseFloat(ellipseInputFieldStringb);
+  ellipseInputFieldb.value = '';
+
+  const totalEllipse = 3.14 * ellipseInputAmounta * ellipseInputAmountb;
+  
 
   const previousEllipseResultField = document.getElementById('ellipse-result');
   
