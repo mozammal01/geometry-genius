@@ -1,6 +1,6 @@
 const resultField = document.getElementById('result-field');
 
-document.getElementById('triangle-calculate-btn').addEventListener('click', function(){
+document.getElementById('triangle-calculate-btn').addEventListener('click', function(event){
   const triangleInputFieldB = document.getElementById('triangle-input-b')
   const triangleInputFieldStringB = triangleInputFieldB.value;
   const triangleInputAmountB = parseFloat(triangleInputFieldStringB);
@@ -17,10 +17,17 @@ document.getElementById('triangle-calculate-btn').addEventListener('click', func
   const previousTriangleResultField = document.getElementById('triangle-result');
 
   previousTriangleResultField.innerText = totalTriangle
+
+
+  const triangleResultField = document.getElementById('triangle-result-field')
+
+  if(event){
+    triangleResultField.style.display = 'block'
+  }
 })
 
 
-document.getElementById('rectangle-calculate-btn').addEventListener('click', function(){
+document.getElementById('rectangle-calculate-btn').addEventListener('click', function(event){
   const rectangleInputFieldW = document.getElementById('rectangle-input-w')
   const rectangleInputFieldStringW = rectangleInputFieldW.value;
   const rectangleInputAmountW = parseFloat(rectangleInputFieldStringW);
@@ -32,6 +39,16 @@ document.getElementById('rectangle-calculate-btn').addEventListener('click', fun
   rectangleInputFieldl.value = '';
 
   const totalRectangle = rectangleInputAmountW * rectangleInputAmountl;
-  console.log(totalRectangle);
+  
+  const previousRectangleResultField = document.getElementById('rectangle-result');
+
+  previousRectangleResultField.innerText = totalRectangle
+
+
+  const rectangleResultField = document.getElementById('rectangle-result-field')
+
+  if(event){
+    rectangleResultField.style.display = 'block'
+  }
 })
 
