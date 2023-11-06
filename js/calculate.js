@@ -161,7 +161,10 @@ document.getElementById('ellipse-calculate-btn').addEventListener('click', funct
   
   const ellipseResultField = document.getElementById('ellipse-result-field')
 
-  if(event){
+  if(ellipseInputAmounta == Number){
     ellipseResultField.style.display = 'block'
+  }
+  else{
+    alert('enter a number')
   }
 })
