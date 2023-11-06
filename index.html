@@ -30,11 +30,11 @@
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Triangle</h1>
           <h1 class="text-slate-500 m-1">Area (A) = 0.5× b× h</h1>
-          <button class="w-16 px-2 rounded text-left bg-slate-200">b</button>
+          <input id="triangle-input-b" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="b">
           <span class="m-2">cm</span>
-          <button class="w-16 px-2 rounded text-left bg-slate-200">h</button>
+          <input id="triangle-input-h" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="h">
           <span class="m-2">cm</span>
-          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+          <button id="triangle-calculate-btn" class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
 
@@ -45,11 +45,11 @@
         <div>
           <h1 class="text-2xl  text-slate-800 font-bold mt-8">Rectangle</h1>
           <h1 class="text-slate-500 m-1">Area (A) = w× l</h1>
-          <button class="w-16 px-2 rounded text-left bg-slate-200">w</button>
+          <input id="rectangle-input-w" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="w">
           <span class="m-2">cm</span>
-          <button class="w-16 px-2 rounded text-left bg-slate-200">l</button>
+          <input id="rectangle-input-l" class="w-16 px-2 rounded text-left bg-slate-200" type="text" placeholder="l">
           <span class="m-2">cm</span>
-          <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
+          <button id="rectangle-calculate-btn" class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
 
@@ -64,8 +64,14 @@
           <button class="w-full rounded font-semibold p-2 mt-8 text-white bg-blue-600">Calculate</button>
         </div>
       </div>
-      <div class="border-2 rounded text-center p-5 h-72">
+      <div id="result-field" class="border-2 rounded text-center p-5 h-72">
         <h1 class="font-semibold underline">Area calcutation</h1>
+        <div class="hidden">
+          <span>
+            1. Triangle <span class="m-1" id="triangle-result">00</span>cm²
+          </span> 
+          <button class="rounded font-semibold p-2 mt-2 text-white bg-blue-600">Convert to m²</button>
+        </div>
       </div>
     </div>
     <div class="grid grid-cols-4 gap-5 mt-8">
@@ -107,6 +113,8 @@
       </div>
     </div>
   </main>
+  <!--  -->
+  <script src="js/calculate.js"></script>
 </body>
 
 </html>
